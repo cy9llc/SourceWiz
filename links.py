@@ -10,7 +10,7 @@ ap = Api(app)
 
 options = webdriver.ChromeOptions()
 options.headless = True
-driver = webdriver.Chrome("C:/Users/Anish/Desktop/sourcewiz/chromedriver.exe",options=options)
+driver = webdriver.Chrome("/home/anish/sourcewiz/chromedriver",options=options)
 
 def main():
     el = driver.find_elements_by_css_selector("div.yuRUbf a")
