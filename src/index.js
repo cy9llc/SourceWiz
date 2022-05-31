@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Headbar from "./navbar"
 import reportWebVitals from './reportWebVitals';
+import Linki from './linki';
+import Error from './404';
+import { BrowserRouter as Router,Routes,Route, Navigate } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Headbar />
+    
+    <Router>
+      <Routes>
+        <Route  path='/' element={<Navigate to="/recruit"/>}/>
+        <Route  path='/recruit' element={<Linki/>}> </Route>
+        <Route exact path='*' element={<Error/>}/>
+    </Routes>
+    </Router>
   </React.StrictMode>
 );
 
