@@ -1,1 +1,0 @@
-print("google" in "https://www.google.com/search?biw=1036&bih=520&q=related:https://www.linkedin.com/in/lawrence-wong-a4b51a3&sa=X&ved=2ahUKEwjKwIX-8fn3AhU3j2oFHTdAC2Y4HhAfegQIERAI")
