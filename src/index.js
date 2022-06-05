@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Linki from './linki';
 import Error from './404';
 import { BrowserRouter as Router,Routes,Route, Navigate } from 'react-router-dom';
+import Cright from './copyright';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,8 @@ root.render(
         <Route exact path='*' element={<Error/>}/>
     </Routes>
     </Router>
+    
+    <Cright></Cright>
   </React.StrictMode>
 );
 

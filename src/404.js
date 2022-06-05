@@ -26,6 +26,37 @@ export default function Error() {
 
             <br/>
             <Button variant="contained" sx={{backgroundColor:"#FF0000"}} onClick={() => redirection()}>Go back to home page!</Button>
+            <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
         </Grid>
         </>
     )

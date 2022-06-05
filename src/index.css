@@ -12,3 +12,13 @@ code {
     monospace;
 }
 
+h3 {
+  top:10px
+}
+p.lol {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

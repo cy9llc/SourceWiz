@@ -19,12 +19,11 @@ const themer = createTheme ({
 export default function Headbar() {
     return (
     
-    <AppBar style={{backgroundColor:'#ec2427'}}>
+    <AppBar style={{backgroundColor:'#FFFFFF'}}>
         <Toolbar varient="dense">
-       
-        <h1 style={{textAlign:"center"}}>Sourcewiz - Powered by </h1>
         
-        <img className="lol" height="128" width="128" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/awdk7ezzyz5mvycq38iy"/>
+        <img src="/cy9.png" width="140"/>
+        <h1>&nbsp; &nbsp;</h1> 
         
         </Toolbar>
     </AppBar>
