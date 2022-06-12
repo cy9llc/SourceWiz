@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sourcewiz/static/css/main.7b23da1d.css",
-    "main.js": "/sourcewiz/static/js/main.3ac9978b.js",
-    "static/js/787.2b24dc05.chunk.js": "/sourcewiz/static/js/787.2b24dc05.chunk.js",
-    "index.html": "/sourcewiz/index.html",
-    "main.7b23da1d.css.map": "/sourcewiz/static/css/main.7b23da1d.css.map",
-    "main.3ac9978b.js.map": "/sourcewiz/static/js/main.3ac9978b.js.map",
-    "787.2b24dc05.chunk.js.map": "/sourcewiz/static/js/787.2b24dc05.chunk.js.map"
+    "main.css": "/SourceWiz/static/css/main.7b23da1d.css",
+    "main.js": "/SourceWiz/static/js/main.d39764d2.js",
+    "static/js/787.2b24dc05.chunk.js": "/SourceWiz/static/js/787.2b24dc05.chunk.js",
+    "index.html": "/SourceWiz/index.html",
+    "main.7b23da1d.css.map": "/SourceWiz/static/css/main.7b23da1d.css.map",
+    "main.d39764d2.js.map": "/SourceWiz/static/js/main.d39764d2.js.map",
+    "787.2b24dc05.chunk.js.map": "/SourceWiz/static/js/787.2b24dc05.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b23da1d.css",
-    "static/js/main.3ac9978b.js"
+    "static/js/main.d39764d2.js"
   ]
 }

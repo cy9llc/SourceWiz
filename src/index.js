@@ -17,7 +17,7 @@ root.render(
       <Routes>
         <Route  path='/' element={<Navigate to="/recruit"/>}/>
         <Route  path='/recruit' element={<Linki/>}> </Route>
-        <Route exact path='*' element={<Error/>}/>
+        
     </Routes>
     </Router>
     
