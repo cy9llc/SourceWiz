@@ -16,21 +16,131 @@ export default function Linki() {
         setCountry(word)
         console.log(word)
     }
+    const US_states = {
+      "AL": "Alabama",
+      "AK": "Alaska",
+      "AZ": "Arizona",
+      "AR": "Arkansas",
+      "CA": "California",
+      "CO": "Colorado",
+      "CT": "Connecticut",
+      "DE": "Delaware",
+      "FL": "Florida",
+      "GA": "Georgia",
+      "HI": "Hawaii",
+      "ID": "Idaho",
+      "IL": "Illinois",
+      "IN": "Indiana",
+      "IA": "Iowa",
+      "KS": "Kansas",
+      "KY": "Kentucky",
+      "LA": "Louisiana",
+      "ME": "Maine",
+      "MD": "Maryland",
+      "MA": "Massachusetts",
+      "MI": "Michigan",
+      "MN": "Minnesota",
+      "MS": "Mississippi",
+      "MO": "Missouri",
+      "MT": "Montana",
+      "NE": "Nebraska",
+      "NV": "Nevada",
+      "NH": "New Hampshire",
+      "NJ": "New Jersey",
+      "NM": "New Mexico",
+      "NY": "New York",
+      "NC": "North Carolina",
+      "ND": "North Dakota",
+      "OH": "Ohio",
+      "OK": "Oklahoma",
+      "OR": "Oregon",
+      "PA": "Pennsylvania",
+      "RI": "Rhode Island",
+      "SC": "South Carolina",
+      "SD": "South Dakota",
+      "TN": "Tennessee",
+      "TX": "Texas",
+      "UT": "Utah",
+      "VT": "Vermont",
+      "VA": "Virginia",
+      "WA": "Washington",
+      "WV": "West Virginia",
+      "WI": "Wisconsin",
+      "WY": "Wyoming"
+    }
+
+    const indian_states = {
+      "AN":"Andaman and Nicobar Islands",
+      "AP":"Andhra Pradesh",
+      "AR":"Arunachal Pradesh",
+      "AS":"Assam",
+      "BR":"Bihar",
+      "CG":"Chandigarh",
+      "CH":"Chhattisgarh",
+      "DN":"Dadra and Nagar Haveli",
+      "DD":"Daman and Diu",
+      "DL":"Delhi",
+      "GA":"Goa",
+      "GJ":"Gujarat",
+      "HR":"Haryana",
+      "HP":"Himachal Pradesh",
+      "JK":"Jammu and Kashmir",
+      "JH":"Jharkhand",
+      "KA":"Karnataka",
+      "KL":"Kerala",
+      "LA":"Ladakh",
+      "LD":"Lakshadweep",
+      "MP":"Madhya Pradesh",
+      "MH":"Maharashtra",
+      "MN":"Manipur",
+      "ML":"Meghalaya",
+      "MZ":"Mizoram",
+      "NL":"Nagaland",
+      "OR":"Odisha",
+      "PY":"Puducherry",
+      "PB":"Punjab",
+      "RJ":"Rajasthan",
+      "SK":"Sikkim",
+      "TN":"Tamil Nadu",
+      "TS":"Telangana",
+      "TR":"Tripura",
+      "UP":"Uttar Pradesh",
+      "UK":"Uttarakhand",
+      "WB":"West Bengal"
+  }
+
+    function stateCheck(state,JSONlist) {
+      for (const ctrystate in JSONlist) {
+        if(JSONlist[ctrystate] === state)
+          return true
+      }
+      return false
+    }
     function submit_handler() {
+      
         console.log(linki)
         console.log(github)
         console.log(sof)
         if(linki) {
-        if (country == "USA")
-            window.open(`https://www.google.com/search?q="${quary}" "USA" -intitle:"profiles" -inurl:"dir/ " site:www.linkedin.com/in/ OR site:www.linkedin.com/pub/ bachelor OR degree OR licence`)
+        if (stateCheck(country,US_states))
+            window.open(`https://www.google.com/search?q="${quary}" ${country} -intitle:"profiles" -inurl:"dir/ " site:www.linkedin.com/in/ OR site:www.linkedin.com/pub/ bachelor OR degree OR licence`)
         else
-            window.open(`https://www.google.com/search?q="${quary}" "India" -intitle:"profiles" -inurl:"dir/ " site:in.linkedin.com/in/ OR site:in.linkedin.com/pub/ bachelor OR degree OR licence`)
+            window.open(`https://www.google.com/search?q="${quary}" ${country} -intitle:"profiles" -inurl:"dir/ " site:in.linkedin.com/in/ OR site:in.linkedin.com/pub/ bachelor OR degree OR licence`)
         }
         if (github)
-            window.open(`https://github.com/search?&q=${quary}&type=Users`)
+            window.open(`https://github.com/search?&q=${quary} location:"${country},USA"&type=Users`)
         if (sof)
-            window.open(`https://www.google.com/search?q=site:stackoverflow.com/users -"Keeping a low profile." "${quary}" "${country}"`)
+            window.open(`https://www.google.com/search?q=site:stackoverflow.com/users -"Keeping a low profile." "${quary}" "${country},USA"`)
         }
+        
+    let statelist = []
+
+    for (const usstate in US_states) {
+      statelist.push(<MenuItem value={US_states[usstate]}> <img src="/SourceWiz/usa.png" height={16} width={16}/>{US_states[usstate]},USA</MenuItem>)
+    }
+    for  (const instate in indian_states) {
+      statelist.push(<MenuItem value={indian_states[instate]}>  <img src="/SourceWiz/india.png" height={16} width={16}/>{indian_states[instate]},India</MenuItem>)
+    }
     return (
         <Grid container direction="column" alignItems="center" justify="center">
           
@@ -67,9 +177,7 @@ export default function Linki() {
           onChange={(event) => ctry(event.target.value)}
           
         >
-          <MenuItem value="India">🇮🇳 India</MenuItem>
-          <MenuItem value="USA">🇺🇸 United States</MenuItem>
-          
+        {statelist}
         </Select>
 <br/>
   <Button variant="contained" sx={{backgroundColor:"#000000"}} onClick={() => submit_handler()}>Submit!</Button>

@@ -13,14 +13,9 @@ root.render(
   <React.StrictMode>
     <Headbar />
     
-    <Router>
-      <Routes>
-      
-        <Route  path='/' element={<Linki/>}> </Route>
+   <Linki/>
         
-    </Routes>
-    </Router>
-    
+
     <Cright></Cright>
   </React.StrictMode>
 );
