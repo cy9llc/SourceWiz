@@ -142,9 +142,9 @@ export default function Linki() {
             window.open(`https://www.google.com/search?q="${quary}" ${state} -intitle:"profiles" -inurl:"dir/ " site:in.linkedin.com/in/ OR site:in.linkedin.com/pub/ bachelor OR degree OR licence`)
         }
         if (github)
-            window.open(`https://github.com/search?&q=${quary} location:"${state},USA"&type=Users`)
+            window.open(`https://github.com/search?&q=${quary} location:"${state},${country}"&type=Users`)
         if (sof)
-            window.open(`https://www.google.com/search?q=site:stackoverflow.com/users -"Keeping a low profile." "${quary}" "${country},USA"`)
+            window.open(`https://www.google.com/search?q=site:stackoverflow.com/users -"Keeping a low profile." "${quary}" "${state},${country}"`)
         }
         
     
