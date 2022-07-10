@@ -22,7 +22,7 @@ export default function Headbar() {
     <AppBar style={{backgroundColor:'#FFFFFF'}}>
         <Toolbar varient="dense">
         
-        <img src="/Sourcewiz/cy9.png" width="140"/>
+        <img src="/SourceWiz/cy9nav.png" width="140"/>
         <h1>&nbsp; &nbsp;</h1> 
         
         </Toolbar>
