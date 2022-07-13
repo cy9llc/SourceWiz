@@ -15,6 +15,10 @@ export default function Linki() {
     
     const [statelist,setStatelist] = useState([])
 
+    const[beforeflag,setBeforeflag] = useState(false)
+    const[afterflag,setAfterflag] = useState(false)
+    const [beforedate,setBFDate] = useState('')
+    const [afterdate,setAFDate] = useState('')
     function ctry(word) {
       setState('')
       setStatelist([])
@@ -136,13 +140,20 @@ export default function Linki() {
         console.log(github)
         console.log(sof)
         if(linki) {
-        if (country === "USA")
-            window.open(`https://www.google.com/search?q="${quary}" ${state} -intitle:"profiles" -inurl:"dir/ " site:www.linkedin.com/in/ OR site:www.linkedin.com/pub/ bachelor OR degree OR licence`)
+        if (country === "USA") {
+          let bfa = ``
+          if(beforeflag)
+            bfa += `before:${beforedate}`
+          if (afterflag)
+            bfa += `after:${afterdate}`
+            
+            window.open(`https://www.google.com/search?q="${quary}" ${state} -intitle:"profiles" -inurl:"dir/ " site:www.linkedin.com/in/ OR site:www.linkedin.com/pub/ bachelor OR degree OR licence ${bfa}`)
+        }
         else
             window.open(`https://www.google.com/search?q="${quary}" ${state} -intitle:"profiles" -inurl:"dir/ " site:in.linkedin.com/in/ OR site:in.linkedin.com/pub/ bachelor OR degree OR licence`)
         }
         if (github)
-            window.open(`https://github.com/search?&q=${quary} location:"${state},${country}"&type=Users`)
+            window.open(`https://github.com/search?&q=${quary} lo-cation:"${state},${country}"&type=Users`)
         if (sof)
             window.open(`https://www.google.com/search?q=site:stackoverflow.com/users -"Keeping a low profile." "${quary}" "${state},${country}"`)
         }
@@ -200,6 +211,9 @@ export default function Linki() {
         >
         {statelist}
         </Select>
+  <h3></h3>
+  <FormControlLabel label="Before Option" control={<Checkbox checked={beforeflag} onChange={(event) => setBeforeflag(event.target.checked)}/>}/>
+  <FormControlLabel label="After Option" control={<Checkbox checked={afterflag} onChange={(event) => setAfterflag(event.target.checked)}/>}/>
   <Button variant="contained" sx={{backgroundColor:"#000000"}} onClick={() => submit_handler()}>Submit!</Button>
   <br/>
   <br/>
