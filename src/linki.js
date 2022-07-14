@@ -214,6 +214,15 @@ export default function Linki() {
   <h3></h3>
   <FormControlLabel label="Before Option" control={<Checkbox checked={beforeflag} onChange={(event) => setBeforeflag(event.target.checked)}/>}/>
   <FormControlLabel label="After Option" control={<Checkbox checked={afterflag} onChange={(event) => setAfterflag(event.target.checked)}/>}/>
+  <br></br>
+  <h3>Before/After text:</h3>
+  <br/>
+  <TextField fullWidth required label="Before date?" variant="standard" onChange={(event) => setBFDate(event.target.value)}/>
+  <br/>
+  <TextField fullWidth required label="After date?" variant="standard" onChange={(event) => setAFDate(event.target.value)}/>
+  <br/>
+  <br/>
+  <br/>
   <Button variant="contained" sx={{backgroundColor:"#000000"}} onClick={() => submit_handler()}>Submit!</Button>
   <br/>
   <br/>
